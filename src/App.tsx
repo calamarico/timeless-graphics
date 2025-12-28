@@ -1,5 +1,5 @@
 import { Header } from "./layout/Header";
-import { Hero } from "./components/Hero";
+import Hero from "./components/Hero";
 import { Services } from "./components/Services";
 import { Approach } from "./components/Approach";
 import { About } from "./components/About";
