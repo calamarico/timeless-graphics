@@ -1,15 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
-        bg: "#0c0c0c",
-        fg: "#f4f4f4",
-        muted: "#9ca3af",
+        bg: "#0e0e0e",
+        fg: "#f5f5f5",
+        muted: "#a1a1a1",
       },
     },
   },
   plugins: [],
-}
-
+};

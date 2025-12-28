@@ -27,8 +27,32 @@ const itemVariants = {
 
 export function Hero() {
   return (
-    <section className="min-h-screen flex items-center">
-      <Container>
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Background base */}
+      <div className="absolute inset-0 bg-bg" />
+
+      {/* Gradient lights */}
+      <motion.div
+        className="absolute inset-0"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.2 }}
+      >
+        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-white/5 blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-white/5 blur-[140px]" />
+      </motion.div>
+
+      {/* Grain texture */}
+      <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style={{
+          backgroundImage:
+            "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"200\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"4\" stitchTiles=\"stitch\"/></filter><rect width=\"100%\" height=\"100%\" filter=\"url(%23n)\"/></svg>')",
+        }}
+      />
+
+      {/* Content */}
+      <Container className="relative z-10 min-h-screen flex items-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
