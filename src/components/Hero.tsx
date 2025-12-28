@@ -1,106 +1,51 @@
 import { motion } from "framer-motion";
-import { Container } from "../ui/Container";
 
-const containerVariants = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.12,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
-
-export function Hero() {
+export default function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden">
-      {/* Background base */}
-      <div className="absolute inset-0 bg-bg" />
+    <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-neutral-900 via-black to-neutral-800" />
 
-      {/* Gradient lights */}
-      <motion.div
-        className="absolute inset-0"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2 }}
-      >
-        <div className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-white/5 blur-[120px]" />
-        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-white/5 blur-[140px]" />
-      </motion.div>
-
-      {/* Grain texture */}
-      <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
-        style={{
-          backgroundImage:
-            "url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"200\" height=\"200\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.8\" numOctaves=\"4\" stitchTiles=\"stitch\"/></filter><rect width=\"100%\" height=\"100%\" filter=\"url(%23n)\"/></svg>')",
-        }}
-      />
-
-      {/* Content */}
-      <Container className="relative z-10 min-h-screen flex items-center">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="show"
-          className="max-w-3xl"
+      <div className="relative z-10 max-w-5xl px-6 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          className="text-4xl md:text-6xl font-bold tracking-tight mb-6"
         >
-          {/* Eyebrow */}
-          <motion.p
-            variants={itemVariants}
-            className="text-xs uppercase tracking-[0.35em] text-muted"
-          >
-            Fotografía y vídeo
-          </motion.p>
+          Timeless Visual Stories
+        </motion.h1>
 
-          {/* Headline */}
-          <motion.h1
-            variants={itemVariants}
-            className="mt-6 text-5xl md:text-7xl font-medium leading-[1.05]"
-          >
-            Historias reales,
-            <br />
-            contadas con calma
-          </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
+          className="text-lg md:text-xl text-neutral-300 max-w-2xl mx-auto mb-10"
+        >
+          Audiovisual production, photography and visual storytelling focused on
+          emotion, detail and timeless aesthetics.
+        </motion.p>
 
-          {/* Subheadline */}
-          <motion.p
-            variants={itemVariants}
-            className="mt-8 text-lg text-muted max-w-lg"
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut", delay: 0.4 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <a
+            href="#services"
+            className="px-8 py-3 rounded-full bg-white text-black font-medium hover:bg-neutral-200 transition"
           >
-            Fotografía y vídeo para bodas y familias,
-            <br />
-            con un enfoque natural y sin artificios.
-          </motion.p>
-
-          {/* CTA */}
-          <motion.div
-            variants={itemVariants}
-            className="mt-12 flex gap-6"
+            View services
+          </a>
+          <a
+            href="#contact"
+            className="px-8 py-3 rounded-full border border-white/30 text-white hover:bg-white/10 transition"
           >
-            <button className="px-8 py-3 rounded-full bg-fg text-bg text-sm font-medium">
-              Hablemos
-            </button>
-            <button className="px-8 py-3 rounded-full border border-fg/20 text-sm">
-              Servicios
-            </button>
-          </motion.div>
+            Contact
+          </a>
         </motion.div>
-      </Container>
+      </div>
     </section>
   );
 }
