@@ -1,25 +1,5 @@
-import { Header } from "./layout/Header";
-import Hero from "./components/Hero";
-import { Services } from "./components/Services";
-import { Approach } from "./components/Approach";
-import { About } from "./components/About";
-import { Contact } from "./components/Contact";
-import { Footer } from "./components/Footer";
+import Home from "./pages/Home";
 
-function App() {
-  return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <Services />
-        <Approach />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
-    </>
-  );
+export default function App() {
+  return <Home />;
 }
-
-export default App;
