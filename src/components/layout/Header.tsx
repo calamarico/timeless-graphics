@@ -16,7 +16,7 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#" className="text-white font-semibold tracking-wide">
-          Timeless
+          Timeless Graphics
         </a>
 
         <nav className="flex gap-6 text-sm text-neutral-300">
