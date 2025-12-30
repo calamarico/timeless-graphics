@@ -11,16 +11,35 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="text-4xl md:text-6xl font-bold tracking-tight mb-6"
+          className="
+            text-[2.75rem]
+            leading-[1.05]
+            tracking-tight
+            font-semibold
+            mb-6
+            sm:text-5xl
+            md:text-6xl
+          "
         >
-          Timeless Visual Stories
+          Timeless
+          <br className="sm:hidden" />
+          Visual Stories
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
-          className="text-lg md:text-xl text-neutral-300 max-w-2xl mx-auto mb-10"
+          className="
+            text-base
+            leading-relaxed
+            text-neutral-300
+            max-w-[22rem]
+            mx-auto
+            mb-10
+            sm:text-lg
+            sm:max-w-2xl
+          "
         >
           Audiovisual production, photography and visual storytelling focused on
           emotion, detail and timeless aesthetics.
@@ -30,17 +49,44 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="
+            flex
+            flex-col
+            gap-4
+            sm:flex-row
+            sm:justify-center
+          "
         >
           <a
             href="#services"
-            className="px-8 py-3 rounded-full bg-white text-black font-medium hover:bg-neutral-200 transition"
+            className="
+              px-8
+              py-4
+              rounded-full
+              bg-white
+              text-black
+              font-medium
+              text-base
+              hover:bg-neutral-200
+              transition
+            "
           >
             View services
           </a>
+
           <a
             href="#contact"
-            className="px-8 py-3 rounded-full border border-white/30 text-white hover:bg-white/10 transition"
+            className="
+              px-8
+              py-4
+              rounded-full
+              border
+              border-white/30
+              text-white
+              text-base
+              hover:bg-white/10
+              transition
+            "
           >
             Contact
           </a>

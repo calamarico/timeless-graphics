@@ -13,10 +13,12 @@ export default function ServiceCard({ title, description }: Props) {
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
       whileHover={{ y: -4 }}
-      className="p-8 border border-white/10 rounded-2xl bg-neutral-900/40 hover:bg-neutral-900 transition"
+      className="p-6 sm:p-8 border border-white/10 rounded-2xl bg-neutral-900/40 hover:bg-neutral-900 transition"
     >
-      <h3 className="text-xl font-medium mb-4">{title}</h3>
-      <p className="text-neutral-400 text-sm leading-relaxed">
+      <h3 className="text-lg sm:text-xl font-medium mb-3 sm:mb-4">
+        {title}
+      </h3>
+      <p className="text-neutral-400 text-sm sm:text-base leading-relaxed">
         {description}
       </p>
     </motion.div>

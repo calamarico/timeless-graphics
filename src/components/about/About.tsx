@@ -4,9 +4,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-black text-white py-28 border-t border-white/10"
+      className="bg-black text-white py-20 sm:py-28 border-t border-white/10"
     >
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 grid gap-12 md:grid-cols-2 items-center">
         {/* Text */}
         <div>
           <motion.h2
@@ -14,7 +14,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-semibold mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6 leading-snug"
           >
             Visual stories, crafted with intention
           </motion.h2>
@@ -24,7 +24,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
             viewport={{ once: true }}
-            className="text-neutral-300 leading-relaxed max-w-xl"
+            className="text-sm sm:text-base md:text-lg text-neutral-300 leading-relaxed max-w-full sm:max-w-lg"
           >
             Every image and every frame is created with a clear purpose:
             to capture emotion, authenticity and moments that feel timeless.
@@ -39,7 +39,7 @@ export default function About() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10"
+          className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-white/10"
         >
           {/* Placeholder visual */}
           <div className="absolute inset-0 bg-gradient-to-br from-neutral-700 via-neutral-900 to-black" />

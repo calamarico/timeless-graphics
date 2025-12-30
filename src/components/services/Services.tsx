@@ -22,14 +22,14 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-black text-white py-24 border-t border-white/10"
+      className="bg-black text-white py-20 sm:py-24 border-t border-white/10"
     >
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-12">
+      <div className="max-w-5xl sm:max-w-6xl mx-auto px-6 sm:px-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8 sm:mb-12 text-center sm:text-left">
           Services
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-3">
           {services.map((service) => (
             <ServiceCard key={service.title} {...service} />
           ))}
