@@ -1,25 +1,12 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const [offsetY, setOffsetY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setOffsetY(window.scrollY * 0.2); // factor de parallax
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
-      {/* Imagen de fondo con parallax */}
+      {/* Imagen de fondo */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/images/tg-street.jpeg')",
-          transform: `translateY(${offsetY}px)`,
-          transition: "transform 0.1s linear",
-        }}
+        style={{ backgroundImage: "url('/images/tg-street.jpeg')" }}
       />
 
       {/* Overlay para contraste */}
