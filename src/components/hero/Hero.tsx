@@ -49,47 +49,43 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.4 }}
-          className="
-            flex
-            flex-col
-            gap-4
-            sm:flex-row
-            sm:justify-center
-          "
+          className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <a
+          <motion.a
             href="#services"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.98 }}
             className="
-              px-8
-              py-4
+              px-8 py-4
               rounded-full
-              bg-white
-              text-black
+              bg-white text-black
               font-medium
               text-base
               hover:bg-neutral-200
               transition
+              focus:outline-none focus:ring-2 focus:ring-white/40
             "
           >
             View services
-          </a>
+          </motion.a>
 
-          <a
+          <motion.a
             href="#contact"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.98 }}
             className="
-              px-8
-              py-4
+              px-8 py-4
               rounded-full
-              border
-              border-white/30
+              border border-white/30
               text-white
               text-base
               hover:bg-white/10
               transition
+              focus:outline-none focus:ring-2 focus:ring-white/40
             "
           >
             Contact
-          </a>
+          </motion.a>
         </motion.div>
       </div>
     </section>
