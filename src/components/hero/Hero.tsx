@@ -6,7 +6,7 @@ export default function Hero() {
       {/* Imagen de fondo */}
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/tg-street.jpeg')" }}
+        style={{ backgroundImage: "url('/images/tg-street2.jpg')" }}
       />
 
       {/* Overlay para contraste */}
