@@ -23,7 +23,7 @@ export default function Footer() {
             transition
           "
         >
-          © {new Date().getFullYear()} Visual Studio
+          © {new Date().getFullYear()} Timeless Graphics
         </motion.a>
       </div>
     </footer>
