@@ -33,19 +33,34 @@ export default function About() {
           </motion.p>
         </div>
 
-        {/* Visual block */}
+        {/* Logo block */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden border border-white/10"
+          className="
+            relative
+            w-full
+            aspect-[4/5]
+            rounded-2xl
+            border border-white/10
+            bg-black
+            flex items-center justify-center
+          "
         >
-          {/* Placeholder visual */}
-          <div className="absolute inset-0 bg-gradient-to-br from-neutral-700 via-neutral-900 to-black" />
-
-          {/* Subtle overlay */}
-          <div className="absolute inset-0 bg-black/30" />
+          <motion.img
+            src="/images/timeless-graphics-logo.jpeg"
+            alt="Timeless Graphics logo"
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut", delay: 0.2 }}
+            className="
+              h-[78%]
+              w-auto
+              object-contain
+            "
+          />
         </motion.div>
       </div>
     </section>
