@@ -28,7 +28,7 @@ export default function Header() {
             "
           >
             <img
-              src="/logo.png"
+              src="/logo.avif"
               alt="Timeless Graphics logo"
               className="h-7 w-auto"
             />

@@ -14,7 +14,7 @@ export default function Home() {
         <Hero />
         <Services />
 
-        <VisualBreak imageSrc="/images/visual-break.jpg" />
+        <VisualBreak imageSrc="/images/visual-break.webp" />
 
         <About />
         <Contact />

@@ -50,7 +50,7 @@ export default function About() {
           "
         >
           <motion.img
-            src="/images/timeless-graphics-logo.jpeg"
+            src="/images/timeless-graphics-logo.webp"
             alt="Timeless Graphics logo"
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
