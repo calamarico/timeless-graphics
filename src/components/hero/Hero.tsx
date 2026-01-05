@@ -10,7 +10,7 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
 
-  // Parallax suave (ajusta -80 / 80 si quieres más o menos)
+  // Parallax vertical suave
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "14%"]);
 
   return (
@@ -18,7 +18,7 @@ export default function Hero() {
       ref={ref}
       className="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
     >
-      {/* Imagen de fondo con parallax */}
+      {/* Background image with parallax */}
       <motion.div
         style={{
           y,
@@ -27,12 +27,10 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center will-change-transform"
       />
 
-
-      {/* Overlay para contraste */}
+      {/* Global overlay for contrast */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/80" />
 
-      {/* Contenido */}
-      {/* Contenido */}
+      {/* Content */}
       <div className="relative z-10 max-w-5xl px-6 text-center">
         {/* Text block with subtle contrast layer */}
         <div className="relative inline-block">
@@ -79,18 +77,52 @@ export default function Hero() {
           </motion.p>
         </div>
 
-        {/* CTAs */}
+        {/* Call to actions */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.4 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          …
+          <motion.a
+            href="#services"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            className="
+              px-8 py-4
+              rounded-full
+              bg-white text-black
+              font-medium
+              text-base
+              hover:bg-neutral-200
+              transition
+              focus:outline-none focus:ring-2 focus:ring-white/40
+            "
+          >
+            View services
+          </motion.a>
+
+          <motion.a
+            href="#contact"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            className="
+              px-8 py-4
+              rounded-full
+              border border-white/30
+              text-white
+              text-base
+              hover:bg-white/10
+              transition
+              focus:outline-none focus:ring-2 focus:ring-white/40
+            "
+          >
+            Contact
+          </motion.a>
         </motion.div>
       </div>
 
-      {/* Fade out hacia la siguiente sección */}
+      {/* Fade out to next section */}
       <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-b from-transparent to-black pointer-events-none" />
     </section>
   );
