@@ -10,7 +10,10 @@ export default function VisualBreak({
   alt = "Visual moment",
 }: VisualBreakProps) {
   return (
-    <section className="bg-black py-32 sm:py-40 border-t border-white/5 overflow-hidden">
+    <section className="relative bg-black py-32 sm:py-40 border-t border-white/5 overflow-hidden">
+      {/* Transition fade from previous section */}
+      <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-t from-transparent to-black pointer-events-none" />
+
       <div className="max-w-6xl mx-auto px-6 sm:px-8 overflow-hidden">
         <div className="grid grid-cols-12 items-center gap-y-16">
 
@@ -18,7 +21,7 @@ export default function VisualBreak({
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
+            transition={{ duration: 1.1, ease: "easeOut", delay: 0.15 }}
             viewport={{ once: true }}
             className="col-span-12 md:col-span-4 text-neutral-400"
           >
