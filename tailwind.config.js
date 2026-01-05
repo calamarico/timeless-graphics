@@ -11,6 +11,9 @@ export default {
         fg: "#f5f5f5",
         muted: "#a1a1a1",
       },
+      fontFamily: {
+        sans: ['"Inter"', 'ui-sans-serif', 'system-ui'],
+      },
     },
   },
   plugins: [],
