@@ -10,8 +10,8 @@ export default function VisualBreak({
   alt = "Visual moment",
 }: VisualBreakProps) {
   return (
-    <section className="bg-black py-32 sm:py-40 border-t border-white/5">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8">
+    <section className="bg-black py-32 sm:py-40 border-t border-white/5 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 overflow-hidden">
         <div className="grid grid-cols-12 items-center gap-y-16">
 
           {/* Left editorial text */}
@@ -34,14 +34,16 @@ export default function VisualBreak({
           </motion.div>
 
           {/* Visual block */}
-          <div className="col-span-12 md:col-span-8 md:col-start-5">
-            <div className="relative">
+          <div className="col-span-12 md:col-span-8 md:col-start-5 overflow-hidden">
+            <div className="relative overflow-hidden">
 
               {/* Canvas */}
               <div
                 className="
                   absolute
-                  -inset-10
+                  inset-0
+                  sm:-inset-6
+                  md:-inset-10
                   rounded-[2.5rem]
                   bg-neutral-900/70
                   border border-white/5
@@ -54,7 +56,7 @@ export default function VisualBreak({
                 whileInView={{ opacity: 1, x: 0, scale: 1 }}
                 transition={{
                   duration: 1.2,
-                  ease: [0.22, 1, 0.36, 1], // cinematic ease
+                  ease: [0.22, 1, 0.36, 1],
                 }}
                 viewport={{ once: true }}
                 className="
