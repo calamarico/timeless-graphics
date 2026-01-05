@@ -114,6 +114,8 @@ export default function Hero() {
           </motion.a>
         </motion.div>
       </div>
+      {/* Fade out hacia la siguiente sección */}
+      <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-b from-transparent to-black pointer-events-none" />
     </section>
   );
 }

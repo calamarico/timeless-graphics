@@ -41,19 +41,20 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-black text-white py-20 sm:py-24 border-t border-white/10"
+      className="bg-black text-white pt-28 pb-24 sm:pt-32 sm:pb-28 border-t border-white/10"
     >
       <div className="max-w-5xl sm:max-w-6xl mx-auto px-6 sm:px-8">
         {/* Section title */}
         <motion.h2
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
-          className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-14 text-center sm:text-left"
+          className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8 sm:mb-12 text-center sm:text-left"
         >
           Services
         </motion.h2>
+
 
         {/* Photo */}
         <motion.div
