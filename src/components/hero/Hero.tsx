@@ -1,16 +1,35 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 export default function Hero() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  // Scroll progress del Hero
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+
+  // Parallax suave (ajusta -80 / 80 si quieres más o menos)
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "14%"]);
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
-      {/* Imagen de fondo */}
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/tg-street2.avif')" }}
+    <section
+      ref={ref}
+      className="relative min-h-screen flex items-center justify-center text-white overflow-hidden"
+    >
+      {/* Imagen de fondo con parallax */}
+      <motion.div
+        style={{
+          y,
+          backgroundImage: "url('/images/tg-street2.avif')",
+        }}
+        className="absolute inset-0 bg-cover bg-center will-change-transform"
       />
 
+
       {/* Overlay para contraste */}
-      <div className="absolute inset-0 bg-black/40 bg-gradient-to-b from-black/30 to-black/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/80" />
 
       {/* Contenido */}
       <div className="relative z-10 max-w-5xl px-6 text-center">
