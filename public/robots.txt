@@ -27,3 +27,4 @@ User-agent: meta-externalagent
 Disallow: /
 
 Sitemap: https://timeless-graphics.de/sitemap.xml
+Sitemap: https://timeless-graphics.de/sitemap-images.xml
